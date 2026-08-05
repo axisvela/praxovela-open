@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.exe
+*.db
+*.sqlite
+*.sqlite3
+release-manifest.json
+sbom.json
+.opencode/
