@@ -68,7 +68,7 @@ and architecture is the **private main repository** — it is never copied here.
 2. **Verify it is alive**:
    ```bash
    curl http://localhost:8420/health
-   # → {"status":"ok","runtime":"AXON Core","version":"0.2.0-beta.1"}
+   # → {"status":"ok","runtime":"AXON Core","version":"0.2.0-rc.1"}
    ```
 3. **Read the client contract** in [`docs/api.md`](docs/api.md) (sessions
    `/v1/sessions`, run center `/v1/runcenter/runs`, workspaces
