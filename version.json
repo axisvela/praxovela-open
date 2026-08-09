@@ -1,6 +1,6 @@
 {
-  "version": "0.1.1",
-  "name": "AxisRobo Agent / PRAXOVELA",
+  "version": "0.2.0-beta.1",
+  "name": "PRAXOVELA",
   "description": "Governed Agent Execution Environment",
   "go": "1.25.0"
 }

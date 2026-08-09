@@ -6,7 +6,9 @@ This is the **public open-source repo** (Apache-2.0) of the PRAXOVELA ecosystem.
 - **Never copy** core source code, architecture docs, roadmap/planning docs, or enterprise features into this repo.
 - **Allowed content**: API docs, integration contracts (protocols/), examples, build/release tooling, and client-facing metadata (version.json).
 - When updating files, keep them in sync with the private repo where applicable (e.g. `docs/api.md`, `version.json`, `protocols/`).
-- This repo is bilingual in style: English headers + Chinese detail, matching the ecosystem documentation style.
+- This repo is bilingual: `README.md` is English-primary with a link to the
+  Chinese parallel file `README.zh-CN.md`; keep both in sync. Other docs match
+  the ecosystem style (English headers + Chinese detail where applicable).
 
 Verification commands for this repo (no Go/Rust build here):
 
