@@ -11,7 +11,7 @@ curl http://localhost:8420/health
 ```
 
 ```json
-{"status":"ok","runtime":"AXON Core","version":"0.3.0"}
+{"status":"ok","runtime":"AXON Core","version":"0.10.0"}
 ```
 
 ## 2. Run Center — list runs

@@ -1,13 +1,13 @@
-# AxisRobo Agent — API Reference
+# PRAXOVELA — API Reference
 
 **Base URL**: `http://localhost:8420` (configurable via `AXON_PORT`)
-**Version**: 0.5.0
+**Version**: 0.10.0
 
 ## HTTP API
 
 ### Health
 ```
-GET /health → {"status":"ok","runtime":"AXON Core","version":"0.3.0"}
+GET /health → {"status":"ok","runtime":"AXON Core","version":"0.10.0"}
 ```
 
 ### Sessions
