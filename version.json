@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0-rc.1",
+  "version": "0.10.0",
   "name": "PRAXOVELA",
   "description": "Governed Agent Execution Environment",
   "go": "1.25.0"
