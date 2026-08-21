@@ -50,7 +50,7 @@
 2. **确认在线**：
    ```bash
    curl http://localhost:8420/health
-   # → {"status":"ok","runtime":"AXON Core","version":"0.10.0"}
+   # → {"status":"ok","runtime":"AXON Core","version":"1.1.0"}
    ```
 3. **阅读客户端契约** —— [`docs/api.md`](docs/api.md)：会话 `/v1/sessions`、运行中心 `/v1/runcenter/runs`、工作区 `/v1/workspaces`、模型 `/v1/models`、知识库 `/v1/knowledge`、审批 `/v1/approvals`、SSE 事件流、恢复 `/v1/runs/{id}/recover`。
 4. **对接内部平面** —— 阅读 [`protocols/`](protocols/) 下对应契约。
