@@ -1,13 +1,13 @@
 # PRAXOVELA — API Reference
 
 **Base URL**: `http://localhost:8420` (configurable via `AXON_PORT`)
-**Version**: 1.1.0
+**Version**: 1.9.0
 
 ## HTTP API
 
 ### Health
 ```
-GET /health     → {"status":"ok","runtime":"AXON Core","version":"1.1.0"}
+GET /health     → {"status":"ok","runtime":"AXON Core","version":"1.9.0"}
 GET /api/status → alias of /health
 ```
 
@@ -492,7 +492,15 @@ GET  /v1/bus/dequeue      → Dequeue a message (Member)
 GET  /v1/plugins               → List plugins
 POST /v1/plugins               → Register plugin (Admin)
 DELETE /v1/plugins/{name}      → Delete plugin (Admin)
-PUT  /v1/plugins/{name}/toggle → Toggle plugin (Admin)
+PUT  /v1/plugins/{name}/toggle
+
+### Plugin Governance (SYNDOVELA skill plane)
+```
+GET  /v1/governance/plugins                     → unified catalog (id/version/kind/source/state/invocable/digest)
+POST /v1/governance/plugins/{id}/disable        → close mediation gate (Member)
+POST /v1/governance/plugins/{id}/enable         → restore (Member); QUARANTINED → 409 approval required
+POST /v1/governance/plugins/{id}/quarantine     → mark QUARANTINED (Admin)
+``` → Toggle plugin (Admin)
 ```
 
 ### External Directory
