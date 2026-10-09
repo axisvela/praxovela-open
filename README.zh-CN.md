@@ -6,7 +6,7 @@
 
 **PRAXOVELA**（原名 **AxisRobo Agent**，运行时：**AXON Core**）将**治理**视为一等公民原语：Agent 请求能力、策略面决策、高风险操作进入沙箱执行、每一步操作都追加进可审计、可重放的事件链——且这一切都发生在本机，数据默认不离开你的机器。
 
-本仓库是 PRAXOVELA 生态的**公开开源门面**，以 **Apache License 2.0** 发布，面向所有希望与 PRAXOVELA 集成的第三方开发者、集成商与构建方。这里承载：面向客户端的 API 文档、稳定的集成契约（Protocols）、示例与构建工具。
+本仓库是 PRAXOVELA 生态的**公开开源门面**，以 **Apache License 2.0** 发布，是面向第三方的**分发与校验面**：面向客户端的 API 文档、稳定的集成契约（Protocols）、示例与发布产物校验。在 **2.0 分发模型**下，发布产物由**核心仓库（core）生成**，本仓库仅依据 core 产出的 release manifest、SBOM 与 `SHA256SUMS` 进行**校验**——本仓库**只校验、不生成**发布证据。
 
 ---
 
@@ -29,7 +29,7 @@
 | [`protocols/connector/`](protocols/connector/README.md) | 连接器协议（L5/L3 ↔ 企业系统） |
 | [`protocols/sandbox/`](protocols/sandbox/README.md) | 沙箱提供者接口（L3 ↔ L2） |
 | [`example/`](example/README.md) | 集成示例（针对 axond API 的 curl 用例） |
-| `scripts/` | 构建/发布工具（引用 monorepo 布局） |
+| `scripts/` | 发布产物校验工具；遗留构建参考（生成由 core 仓库负责） |
 | `version.json` | 产品版本单一来源 |
 
 ## 本仓库不是什么
@@ -42,7 +42,7 @@
 |------|---------|--------|------|
 | `praxovela` | AGPL | 私有 | 主运行时源码：AXON core、Janus Gateway、Vulcan Forge、Run Center、AxisLink、adapters |
 | `praxovela-ee` | 专有 | 私有 | 企业版：Archon Guard、Argus Trace、runcenter-ext、PDP/SIEM/OIDC/Mneme |
-| `praxovela-open` | Apache-2.0 | **公开** | SDK/API 文档、集成契约、示例、构建工具 |
+| `praxovela-open` | Apache-2.0 | **公开** | SDK/API 文档、集成契约、示例、发布产物校验 |
 
 ## 集成者快速开始
 
@@ -50,13 +50,13 @@
 2. **确认在线**：
    ```bash
    curl http://localhost:8420/health
-    # → {"status":"ok","runtime":"AXON Core","version":"1.4.0"}
+     # → {"status":"ok","runtime":"AXON Core","version":"2.0.0"}
    ```
 3. **阅读客户端契约** —— [`docs/api.md`](docs/api.md)：会话 `/v1/sessions`、运行中心 `/v1/runcenter/runs`、工作区 `/v1/workspaces`、模型 `/v1/models`、知识库 `/v1/knowledge`、审批 `/v1/approvals`、SSE 事件流、恢复 `/v1/runs/{id}/recover`。
 4. **对接内部平面** —— 阅读 [`protocols/`](protocols/) 下对应契约。
 5. **复制调用示例** —— [`example/curl-api.md`](example/curl-api.md)。
 
-> **注意**：`scripts/` 下的构建脚本引用的是 monorepo 布局（`packages/*`、`apps/desktop/*`），是构建/发布流程的参考实现，在本仓库中**不可直接运行**。
+> **注意**：发布产物由核心仓库（core）生成。在 2.0 分发模型下，本仓库仅依据 core 产出的 manifest、SBOM 与 `SHA256SUMS` 对其进行校验。`scripts/` 下引用 monorepo 布局（`packages/*`、`apps/desktop/*`）的条目保留为构建/发布流程的参考，在本仓库中**不可直接运行**。
 
 ## License 与贡献
 

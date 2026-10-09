@@ -10,9 +10,14 @@ plane decides, high-risk operations run sandboxed, and every action is appended
 to an auditable, replayable trace — before anything leaves your machine.
 
 This repository is the **public open-source face** of the PRAXOVELA ecosystem,
-published under the **Apache License 2.0**. It is where third parties integrate:
-client-facing API docs, stable integration contracts, examples, and build
-tooling.
+published under the **Apache License 2.0**. It is the distribution and
+verification surface for third parties: client-facing API docs, stable
+integration contracts, examples, and release-asset verification.
+
+Under the **2.0 distribution model**, release assets are **produced by the core
+repository** and **verified here** against the core-produced release manifest,
+SBOM, and `SHA256SUMS`. This repo is **verify-only**: it does not generate
+release evidence.
 
 ---
 
@@ -43,7 +48,7 @@ doing real work:
 | [`protocols/connector/`](protocols/connector/README.md) | Connector protocol (L5/L3 ↔ enterprise systems) |
 | [`protocols/sandbox/`](protocols/sandbox/README.md) | Sandbox provider interface (L3 ↔ L2) |
 | [`example/`](example/README.md) | Integration examples (curl against the axond API) |
-| `scripts/` | Build/release tooling (references the monorepo layout) |
+| `scripts/` | Release-asset verification tooling; legacy build references (generation is owned by the core repo) |
 | `version.json` | Product version single source |
 
 ## What This Repo is NOT
@@ -58,7 +63,7 @@ and architecture is the **private main repository** — it is never copied here.
 |------|---------|------------|----------|
 | `praxovela` | AGPL | Private | Main runtime source: AXON core, Janus Gateway, Vulcan Forge, Run Center, AxisLink, adapters |
 | `praxovela-ee` | Proprietary | Private | Enterprise: Archon Guard, Argus Trace, runcenter-ext, PDP/SIEM/OIDC/Mneme |
-| `praxovela-open` | Apache-2.0 | **Public** | SDK/API docs, integration contracts, examples, build tooling |
+| `praxovela-open` | Apache-2.0 | **Public** | SDK/API docs, integration contracts, examples, release-asset verification |
 
 ## Quick Start for Integrators
 
@@ -67,8 +72,8 @@ and architecture is the **private main repository** — it is never copied here.
    `AXON_PORT`).
 2. **Verify it is alive**:
    ```bash
-   curl http://localhost:8420/health
-    # → {"status":"ok","runtime":"AXON Core","version":"1.4.0"}
+    curl http://localhost:8420/health
+     # → {"status":"ok","runtime":"AXON Core","version":"2.0.0"}
    ```
 3. **Read the client contract** in [`docs/api.md`](docs/api.md) (sessions
    `/v1/sessions`, run center `/v1/runcenter/runs`, workspaces
@@ -78,9 +83,11 @@ and architecture is the **private main repository** — it is never copied here.
    [`protocols/`](protocols/).
 5. **Copy the curl patterns** from [`example/curl-api.md`](example/curl-api.md).
 
-> **Note**: `scripts/` build tooling references the monorepo layout
-> (`packages/*`, `apps/desktop/*`) and is kept as a reference of the
-> build/release process — it is not runnable in this repo.
+> **Note**: Release assets are produced by the core repository. Under the 2.0
+> distribution model this repo only verifies them against the core-produced
+> manifest, SBOM, and `SHA256SUMS`. The `scripts/` entries that reference the
+> monorepo layout (`packages/*`, `apps/desktop/*`) are retained as a reference of
+> the build/release process and are not runnable in this repo.
 
 ## License & Contributions
 
