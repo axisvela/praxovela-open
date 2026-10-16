@@ -332,6 +332,10 @@ GET /v1/profiles → List all profile types
 GET  /v1/approvals                 → Pending approvals
 POST /v1/approvals/{id}/response   → Respond (approved/denied)
 ```
+The response body must carry an explicit decision:
+`{"decision":"approved"}` or `{"decision":"denied"}` (`deny_all` is also
+accepted). A missing or unrecognised decision, or a body that is not JSON, is
+refused with `400` — the endpoint never defaults to approval.
 
 ### Audit & Trace
 ```
@@ -492,7 +496,9 @@ GET  /v1/bus/dequeue      → Dequeue a message (Member)
 GET  /v1/plugins               → List plugins
 POST /v1/plugins               → Register plugin (Admin)
 DELETE /v1/plugins/{name}      → Delete plugin (Admin)
-PUT  /v1/plugins/{name}/toggle
+PUT  /v1/plugins/{name}/toggle → Toggle plugin (Admin), body {"enabled":true}
+```
+A malformed toggle body is refused with `400` (never decoded as `enabled=false`).
 
 ### Plugin Governance (SYNDOVELA skill plane)
 ```
@@ -500,7 +506,6 @@ GET  /v1/governance/plugins                     → unified catalog (id/version/
 POST /v1/governance/plugins/{id}/disable        → close mediation gate (Member)
 POST /v1/governance/plugins/{id}/enable         → restore (Member); QUARANTINED → 409 approval required
 POST /v1/governance/plugins/{id}/quarantine     → mark QUARANTINED (Admin)
-``` → Toggle plugin (Admin)
 ```
 
 ### External Directory
@@ -578,7 +583,7 @@ GET  /api/copilotkit/tools            → Available tools
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `AXON_PORT` | 8420 | HTTP port |
-| `AXON_ALLOW_REMOTE` | `""` | Set to `1` to listen on `0.0.0.0` |
+| `AXON_ALLOW_REMOTE` | `""` | Set to `1` to listen on `0.0.0.0`. The daemon refuses to start a non-loopback listen unless `AXON_API_KEY` is set or an identity token store is configured |
 | `AXON_API_KEY` | `""` | Bearer token auth |
 | `AXON_SYSTEM_PROMPT` | `""` | Custom system prompt |
 | `AXON_DB_PATH` | ./data/axon.db | SQLite path |
