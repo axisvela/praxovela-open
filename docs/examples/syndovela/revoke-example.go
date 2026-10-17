@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/axisrobo/praxovela/adapters/syndovela"
-	"github.com/axisrobo/praxovela/pkg/syndovela/contract"
+	"github.com/axisvela/praxovela/adapters/syndovela"
+	"github.com/axisvela/praxovela/pkg/syndovela/contract"
 )
 
 // BundleBinding 结构

@@ -11,7 +11,7 @@
 
 #### Via Go Module
 ```bash
-go get github.com/axisrobo/praxovela@v1.3.0
+go get github.com/axisvela/praxovela@v1.3.0
 ```
 
 #### Binary Distribution
@@ -25,8 +25,8 @@ go build ./...
 
 ```go
 import (
-    "github.com/axisrobo/praxovela/adapters/syndovela"
-    "github.com/axisrobo/praxovela/axon-core/internal/config"
+    "github.com/axisvela/praxovela/adapters/syndovela"
+    "github.com/axisvela/praxovela/axon-core/internal/config"
     "net/http"
 )
 
@@ -85,7 +85,7 @@ facade := syndovela.NewRuntimeFacade(descriptor, locks)
 #### Wired Client Mode
 ```go
 // Connect to control plane
-import "github.com/axisrobo/praxovela/axon-core/cmd/axond"
+import "github.com/axisvela/praxovela/axon-core/cmd/axond"
 
 // In axond main.go:
 runtime.WithSyndovelaClient(syndovela.NewClient("http://127.0.0.1:8765/syndovela"))
@@ -178,8 +178,8 @@ maintains full backward compatibility with v1.2.0 APIs.
 
 ## Getting Help
 
-- **GitHub Issues**: https://github.com/axisrobo/praxovela/issues
-- **Documentation**: https://github.com/axisrobo/praxovela/wiki
+- **GitHub Issues**: https://github.com/axisvela/praxovela/issues
+- **Documentation**: https://github.com/axisvela/praxovela/wiki
 - **Version**: v1.3.0 (2026-08-24)
 
 ---

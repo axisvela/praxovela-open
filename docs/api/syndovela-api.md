@@ -145,6 +145,6 @@ All endpoints follow fail-closed semantics:
 
 ## Related Documentation
 
-- [Syndovela Architecture](https://github.com/axisrobo/praxovela/blob/v1.3.0/docs/architecture/sbrp-architecture.md)
-- [SBRP Specification](https://github.com/axisrobo/praxovela/blob/v1.3.0/protocols/sbrp/)
+- [Syndovela Architecture](https://github.com/axisvela/praxovela/blob/v1.3.0/docs/architecture/sbrp-architecture.md)
+- [SBRP Specification](https://github.com/axisvela/praxovela/blob/v1.3.0/protocols/sbrp/)
 - [Client Contract](packages/adapters/sbrp/contract.go)
