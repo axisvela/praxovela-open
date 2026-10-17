@@ -22,7 +22,7 @@ import (
 	"net/http/httptest"
 	"os"
 
-	"github.com/axisvela/praxovela/adapters/syndovela"
+	"github.com/axisvela/praxovela/adapters/v3/syndovela"
 	"github.com/axisvela/praxovela/pkg/syndovela/contract"
 )
 
