@@ -73,7 +73,7 @@ and architecture is the **private main repository** — it is never copied here.
 2. **Verify it is alive**:
    ```bash
     curl http://localhost:8420/health
-     # → {"status":"ok","runtime":"AXON Core","version":"2.10.0"}
+     # → {"status":"ok","runtime":"AXON Core","version":"3.0.0"}
    ```
 3. **Read the client contract** in [`docs/api.md`](docs/api.md) (sessions
    `/v1/sessions`, run center `/v1/runcenter/runs`, workspaces
@@ -99,7 +99,7 @@ process or contact us first.
 
 ## Core status (recorded here; no external links)
 
-As of the 2.10.0 release line the AXON Core runtime ships the fail-closed
+As of the 3.0.0 release line the AXON Core runtime ships the fail-closed
 decision / approval / work-item / plugin paths, the RHEOVELA bridge with
 work-item retry (attempts / max_attempts) and cancel, R5 SBRP conformance and
 post-publish rollback. Core and this open distribution share the same clean

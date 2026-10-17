@@ -1,13 +1,13 @@
 # PRAXOVELA — API Reference
 
 **Base URL**: `http://localhost:8420` (configurable via `AXON_PORT`)
-**Version**: 2.10.0
+**Version**: 3.0.0
 
 ## HTTP API
 
 ### Health
 ```
-GET /health     → {"status":"ok","runtime":"AXON Core","version":"2.10.0"}
+GET /health     → {"status":"ok","runtime":"AXON Core","version":"3.0.0"}
 GET /api/status → alias of /health
 ```
 
