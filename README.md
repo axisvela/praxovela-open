@@ -96,3 +96,12 @@ Contributions are accepted under the same license terms (Apache-2.0 §5). PRs,
 issues, and integration examples are welcome. For contributions involving core
 runtime source or architecture documents, please follow the private main repo
 process or contact us first.
+
+## Core status (recorded here; no external links)
+
+As of the 2.9.0 release line the AXON Core runtime ships the fail-closed
+decision / approval / work-item / plugin paths, the RHEOVELA bridge with
+work-item retry (attempts / max_attempts) and cancel, R5 SBRP conformance and
+post-publish rollback. Core and this open distribution share the same clean
+semantic version tag. All 13 business demos executed end-to-end (VERIFY OK) in
+the enterprise-autonomy examples.
