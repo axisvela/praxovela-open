@@ -4,7 +4,7 @@
 
 > A governable, local-first desktop agent runtime for AI execution.
 
-**PRAXOVELA** (formerly **AxisRobo Agent**, runtime: **AXON Core**) treats
+**PRAXOVELA** (formerly **AxisVela Agent**, runtime: **AXON Core**) treats
 governance as a first-class primitive. Agents ask for capabilities, a policy
 plane decides, high-risk operations run sandboxed, and every action is appended
 to an auditable, replayable trace — before anything leaves your machine.

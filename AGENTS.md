@@ -2,7 +2,7 @@
 
 This is the **public open-source repo** (Apache-2.0) of the PRAXOVELA ecosystem. Keep it focused on public-facing assets only.
 
-- **Source of truth**: The private AGPL main repo (`praxovela` / AxisRobo Agent) owns all core runtime source and architecture docs. Enterprise features live in the private proprietary repo (`praxovela-ee`).
+- **Source of truth**: The private AGPL main repo (`praxovela` / AxisVela Agent) owns all core runtime source and architecture docs. Enterprise features live in the private proprietary repo (`praxovela-ee`).
 - **Never copy** core source code, architecture docs, roadmap/planning docs, or enterprise features into this repo.
 - **Allowed content**: API docs, integration contracts (protocols/), examples, build/release tooling, and client-facing metadata (version.json).
 - When updating files, keep them in sync with the private repo where applicable (e.g. `docs/api.md`, `version.json`, `protocols/`).

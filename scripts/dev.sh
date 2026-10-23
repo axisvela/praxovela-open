@@ -2,7 +2,7 @@
 set -e
 
 echo "=========================================="
-echo "  AxisRobo Agent - Development Launcher"
+echo "  AxisVela Agent - Development Launcher"
 echo "=========================================="
 
 # Build AXON Core
