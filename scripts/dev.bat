@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0.."
 
 echo ==========================================
-echo   AxisRobo Agent - Development Launcher
+echo   AxisVela Agent - Development Launcher
 echo ==========================================
 echo.
 
