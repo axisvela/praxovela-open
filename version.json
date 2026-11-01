@@ -1,7 +1,6 @@
-{
-  "version": "3.2.0",
-  "name": "PRAXOVELA",
-  "description": "Governed Agent Execution Environment",
-  "go": "1.25.0"
+﻿{
+    "version":  "3.3.0",
+    "name":  "PRAXOVELA",
+    "description":  "Governed Agent Execution Environment",
+    "go":  "1.25.0"
 }
-
