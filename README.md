@@ -43,6 +43,7 @@ doing real work:
 | Path | Contents |
 |------|----------|
 | [`docs/api.md`](docs/api.md) | `axond` local agent API reference (client contract) |
+| [`sdk/go/`](sdk/go) | Public Go SDK: sessions, agent runs, run-center queries, cancel/recover |
 | [`protocols/axislink/`](protocols/axislink/README.md) | AxisLink UI protocol (L6 UI ↔ L5 Agent) |
 | [`protocols/capability/`](protocols/capability/README.md) | Capability contract (L5 Agent ↔ L4 Governance) |
 | [`protocols/connector/`](protocols/connector/README.md) | Connector protocol (L5/L3 ↔ enterprise systems) |

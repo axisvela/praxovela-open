@@ -68,6 +68,30 @@ Priority order:
 }
 ```
 
+## Rheovela Connector
+
+AXON Core exposes Rheovela as a connector (`connector_id: rheovela`) in
+`packages/adapters/connector`. It calls Rheovela through the public Rheovela Go
+SDK, not ad-hoc HTTP.
+
+Operations:
+
+- `rheovela.health`
+- `rheovela.run.open` / `rheovela.run.get` / `rheovela.run.list`
+- `rheovela.step`
+- `rheovela.run.suspend` / `rheovela.run.resume` / `rheovela.run.compensate`
+- `rheovela.audit`
+- `rheovela.workitem.list` / `claim` / `heartbeat` / `complete` / `fail` / `cancel`
+
+Register it with `AXON_CONNECTORS`:
+
+```sh
+AXON_CONNECTORS="rheo:rheovela:http://127.0.0.1:8080" \
+AXON_RHEOVELA_TOKEN="<bearer>" \
+AXON_RHEOVELA_PROJECT="1" \
+axond
+```
+
 ## Gateway Requirements
 
 Enterprise API gateways may terminate TLS, authenticate users and service accounts, route tenant traffic, apply DLP rules, enforce rate limits, and emit centralized audit events. Connectors must treat gateway decisions as external constraints and must not bypass them.
