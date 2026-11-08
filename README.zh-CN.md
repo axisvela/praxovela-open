@@ -38,6 +38,10 @@
 
 ## 生态（三仓库）
 
+### 边缘与学习边界
+
+PRAXOVELA 保留 Agent Run 权威并嵌入 PRAXO-CORE 执行原语。AKROVELA 的未来托管仅是 adapter 边界，不新增第二个 Agent loop。DIDACTOVELA 产出的候选学习模型既不是授权策略，也不是自动部署批准。两者均仅为未发布 `0.1.0` 引导阶段，尚无功能集成。参见[家族架构与边界](https://github.com/axisvela/axisvela/blob/main/EDGE-AND-LEARNING-ARCHITECTURE.md)。
+
 | 仓库 | License | 可见性 | 内容 |
 |------|---------|--------|------|
 | `praxovela` | AGPL | 私有 | 主运行时源码：AXON core、Janus Gateway、Vulcan Forge、Run Center、AxisLink、adapters |

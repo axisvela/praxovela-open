@@ -60,6 +60,15 @@ and architecture is the **private main repository** — it is never copied here.
 
 ## Ecosystem
 
+### Edge and Learning Boundary
+
+PRAXOVELA retains Agent Run ownership and embeds PRAXO-CORE execution primitives.
+Prospective AKROVELA hosting is an adapter boundary, not a second agent loop.
+DIDACTOVELA candidate learned models are neither authorization policies nor
+automatic deployment approvals. Both new products are unreleased `0.1.0`
+bootstraps, with no functional integration. See the
+[family architecture and boundaries](https://github.com/axisvela/axisvela/blob/main/EDGE-AND-LEARNING-ARCHITECTURE.md).
+
 | Repo | License | Visibility | Contents |
 |------|---------|------------|----------|
 | `praxovela` | AGPL | Private | Main runtime source: AXON core, Janus Gateway, Vulcan Forge, Run Center, AxisLink, adapters |
